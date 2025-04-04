@@ -8,8 +8,10 @@ typedef enum
 } TipusFitxa;
 
 
+
 typedef enum
 {
+
 	COLOR_NEGRE,
 	COLOR_BLANC,
 } ColorFitxa;
