@@ -1,7 +1,7 @@
 #ifndef POSICIO_H
 #define POSICIO_H
-
-
+#include <string>
+using namespace std;
 class Posicio
 {
 public:
@@ -14,6 +14,9 @@ public:
 
 	void setFila(int fila) { m_fila = fila; }
 	void setColumna(int columna) { m_columna = columna; }
+
+	string toString() const;
+
 
 private:
 	int m_fila;
