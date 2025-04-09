@@ -36,8 +36,7 @@ public:
     bool esBlanca() const { return m_color == COLOR_BLANC && m_tipus != TIPUS_EMPTY; }
     bool esNegra() const { return m_color == COLOR_NEGRE && m_tipus != TIPUS_EMPTY; }
     bool esDama() const { return m_tipus == TIPUS_DAMA; }
-
-    
+	bool esNormal() const { return m_tipus == TIPUS_NORMAL; }
 
 
     string toString() const;
