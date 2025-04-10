@@ -5,6 +5,10 @@
 
 using namespace std;
 
+
+static const int MAX_POSICIONS_MITJANES = 16;
+static const int MAX_CAPTURES = 16;
+
 class Moviment
 {
 public:
@@ -26,9 +30,10 @@ public:
 private:
 	Posicio m_inicial;
 	Posicio m_final;
-	int m_nCaptures;
+	Posicio m_posicionsMitjanes[MAX_POSICIONS_MITJANES];
 	int m_nPosicionsMitjanes;
-
+	Posicio m_captures[MAX_CAPTURES];
+	int m_nCaptures;	
 };
 
 
