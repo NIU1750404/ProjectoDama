@@ -15,7 +15,7 @@ class Tauler
 public:
 	Tauler() : m_torn(0) {};
 	~Tauler();
-	Tauler(const Tauler& tauler);
+	Tauler(const Tauler& tauler) ;
 
 	void inicialitza(const string& nomFitxer);
 	void actualitzaMovimentsValids();

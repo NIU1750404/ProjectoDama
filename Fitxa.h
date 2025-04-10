@@ -3,7 +3,7 @@
 #include "Posicio.h"
 using namespace std;
 #include <string>
-static const int MAX_MOVIMENTS_POSIBLES = 4;
+static const int MAX_MOVIMENTS_POSIBLES = 100;
 
 typedef enum
 {
