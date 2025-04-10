@@ -25,7 +25,7 @@ public:
 	void setNCaptures(int nCaptures) { m_nCaptures = nCaptures; }
 	void setNPosicionsMitjanes(int nPosicionsMitjanes) { m_nPosicionsMitjanes = nPosicionsMitjanes; }
 
-	string toString() const;
+	
 
 private:
 	Posicio m_inicial;

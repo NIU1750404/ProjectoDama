@@ -2,7 +2,7 @@
 #include <fstream>
 #include <iostream>
 void Tauler::inicialitza(const string& nomFitxer) {
-    // Initialize board with default position
+    
     for (int i = 0; i < N_FILES; i++) {
         for (int j = 0; j < N_COLUMNES; j++) {
             m_tauler[i][j] = Fitxa();
@@ -27,25 +27,16 @@ void Tauler::inicialitza(const string& nomFitxer) {
 
     ifstream fitxer(nomFitxer);
     if (fitxer.is_open()) {
-        int fila = N_FILES - 1;  // Start from top row (row 8)
+        int fila = N_FILES - 1;  
         int col = 0;
         char c;
 
         while (fitxer.get(c) && fila >= 0) {
-            // Skip spaces and row numbers
-            if (c == ' ' || (c >= '1' && c <= '8')) {
-                continue;
-            }
-
-            // Handle newline
             if (c == '\n') {
                 fila--;
                 col = 0;
-                continue;
             }
-
-            // Process piece characters
-            if (col < N_COLUMNES) {
+            else if (c != ' ' && !(c >= '1' && c <= '8') && col < N_COLUMNES) {
                 switch (c) {
                 case 'O':
                     m_tauler[fila][col] = Fitxa(TIPUS_NORMAL, COLOR_BLANC, Posicio(fila, col));
@@ -68,10 +59,12 @@ void Tauler::inicialitza(const string& nomFitxer) {
         }
 
         fitxer.close();
-        return;
+       
     }
-    
+    m_torn = 0;  
 }
+    
+
 
 void Tauler::actualitzaMovimentsValids()
 {

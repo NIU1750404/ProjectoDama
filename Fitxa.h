@@ -14,10 +14,10 @@ typedef enum
 
 typedef enum
 {
-
 	COLOR_NEGRE,
 	COLOR_BLANC,
 } ColorFitxa;
+
 
 class Fitxa {
 public:
@@ -25,7 +25,6 @@ public:
     Fitxa() : m_tipus(TIPUS_EMPTY), m_color(COLOR_NEGRE){}
     Fitxa(TipusFitxa tipus, ColorFitxa color, Posicio posicio) : m_tipus(tipus), m_color(color), m_posicio(posicio) {}
 
-    
     TipusFitxa getTipus() const { return m_tipus; }
     ColorFitxa getColor() const { return m_color; }
     Posicio getPosicio() const { return m_posicio; }
