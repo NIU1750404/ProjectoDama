@@ -41,7 +41,7 @@ public:
     bool esDama() const { return m_tipus == TIPUS_DAMA; }
 	bool esNormal() const { return m_tipus == TIPUS_NORMAL; }
     
-
+    void convertirDama();
 
 
 private:

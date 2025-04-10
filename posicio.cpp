@@ -12,3 +12,4 @@ bool Posicio::operator==(const Posicio& posicio) const
 {
 	return m_fila == posicio.m_fila && m_columna == posicio.m_columna;
 }
+
