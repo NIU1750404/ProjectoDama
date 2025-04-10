@@ -13,7 +13,7 @@ static const int N_COLUMNES = 8;
 class Tauler
 {
 public:
-	Tauler();
+	Tauler() : m_torn(0) {};
 	~Tauler();
 	Tauler(const Tauler& tauler);
 
