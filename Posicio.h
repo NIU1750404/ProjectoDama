@@ -2,6 +2,8 @@
 #define POSICIO_H
 #include <string>
 using namespace std;
+static const int N_FILES = 8;
+static const int N_COLUMNES = 8;
 class Posicio
 {
 public:
@@ -16,7 +18,7 @@ public:
 	void setFila(int fila) { m_fila = fila; }
 	void setColumna(int columna) { m_columna = columna; }
 
-	string toString() const;
+	void posicioToString(const int fila, const int columna, string& posicio);
 
 	bool operator==(const Posicio& posicio) const;
 

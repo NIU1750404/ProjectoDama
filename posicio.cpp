@@ -1,8 +1,14 @@
 #include "Posicio.h"
 #include <string>
 using namespace std;
-string Posicio::toString() const
+void Posicio::posicioToString(const int fila, const int columna, string& posicio)
 {
-	char col = 'a' + m_columna; 
-	return string(1, col) + to_string(m_fila + 1);
+	posicio = "a1";
+	posicio[0] = 'a' + columna;
+	posicio[1] = '1' + (N_FILES - 1) - fila;
+}
+
+bool Posicio::operator==(const Posicio& posicio) const
+{
+	return m_fila == posicio.m_fila && m_columna == posicio.m_columna;
 }

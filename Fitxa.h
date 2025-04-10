@@ -37,6 +37,7 @@ public:
     bool esNegra() const { return m_color == COLOR_NEGRE && m_tipus != TIPUS_EMPTY; }
     bool esDama() const { return m_tipus == TIPUS_DAMA; }
 	bool esNormal() const { return m_tipus == TIPUS_NORMAL; }
+    bool potMenjar() 
 
 
     string toString() const;
