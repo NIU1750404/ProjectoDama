@@ -18,37 +18,31 @@ void Tauler::inicialitza(const string& nomFitxer) {
             TipusFitxa tipus;
             ColorFitxa color;
 
-            for (int i = 0; i < N_FILES; i++)
+            int colIdx = columna[0] - 'a';
+            int filaIdx = 8 - (fila[0] - '0');
+
+            if (tipusStr == "O" || tipusStr == "X") 
             {
-                for (int j = 0; j < N_COLUMNES; i++)
-                {
-                    if (tipusStr == "O" || tipusStr == "X")
-                    {
-                        tipus = TIPUS_NORMAL;
-                    }
-
-                    else
-                    {
-                        tipus = TIPUS_DAMA;
-                    }
-
-                    if (colorStr == "BLANC")
-                    {
-                        color = COLOR_BLANC;
-                    }
-
-                    else
-                    {
-                        color = COLOR_NEGRE;
-                    }
-                    Fitxa fitxa(tipus, color, pos);
-
-                    m_tauler[i][j] = fitxa;
-                }
-
+                tipus = TIPUS_NORMAL;
             }
 
-            
+            else 
+            {
+                tipus = TIPUS_DAMA;
+            }
+
+            if (colorStr == "BLANC")
+            {
+                color = COLOR_BLANC;
+            }
+
+            else 
+            {
+                color = COLOR_NEGRE;
+            }
+            Fitxa fitxa(tipus, color, pos);
+
+            m_tauler[filaIdx][colIdx] = fitxa;
         }
         archivo.close();
     }
