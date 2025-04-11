@@ -26,7 +26,7 @@ void Tauler::inicialitza(const string& nomFitxer) {
                 tipus = TIPUS_NORMAL;
             }
 
-            else if (tipusStr == "D" || tipusStr == "R") 
+            else 
             {
                 tipus = TIPUS_DAMA;
             }
@@ -36,7 +36,7 @@ void Tauler::inicialitza(const string& nomFitxer) {
                 color = COLOR_BLANC;
             }
 
-            else if (colorStr == "NEGRE") 
+            else 
             {
                 color = COLOR_NEGRE;
             }
