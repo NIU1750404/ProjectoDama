@@ -24,7 +24,7 @@ public:
 	int getNPosicionsMitjanes() const { return m_nPosicionsMitjanes; }
 	void setNCaptures(int nCaptures) { m_nCaptures = nCaptures; }
 	void setNPosicionsMitjanes(int nPosicionsMitjanes) { m_nPosicionsMitjanes = nPosicionsMitjanes; }
-
+	int getFitxesBufades() const { return m_nFitxesBufades; }
 	
 
 private:
@@ -34,6 +34,8 @@ private:
 	int m_nPosicionsMitjanes;
 	Posicio m_captures[MAX_CAPTURES];
 	int m_nCaptures;	
+	Posicio m_fitxesBufades[MAX_CAPTURES];
+	int m_nFitxesBufades;
 };
 
 
