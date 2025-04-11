@@ -48,5 +48,6 @@ private:
     ColorFitxa m_color;  
     Posicio m_posicio;
     Posicio m_posicionsPosibles[MAX_MOVIMENTS_POSIBLES];
+    Posicio m_movimentActual[2];
 };
 #endif
