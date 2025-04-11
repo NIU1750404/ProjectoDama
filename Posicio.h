@@ -8,24 +8,24 @@ class Posicio
 {
 public:
 
-	Posicio() : m_fila(0), m_columna(0) {}
-	Posicio(int fila, int columna) : m_fila(fila), m_columna(columna) {};
+	Posicio() : m_fila(""), m_columna("") {}
+	Posicio(string fila, string columna) : m_fila(fila), m_columna(columna) {};
 	Posicio(const string& posicio);
 
-	int getFila() const { return m_fila; };
-	int getColumna() const { return m_columna; };
+	string getFila() const { return m_fila; };
+	string getColumna() const { return m_columna; };
 
 	void setFila(int fila) { m_fila = fila; }
 	void setColumna(int columna) { m_columna = columna; }
 
-	void posicioToString(const int fila, const int columna, string& posicio);
-
 	bool operator==(const Posicio& posicio) const;
+	string operator+();
 
 private:
-	int m_fila;
-	int m_columna;
+	string m_fila;
+	string m_columna;
 };
 
-
+ostream& operator<<(ostream& os, const Posicio& p);
+istream& operator>>(istream& is, Posicio& p);
 #endif
