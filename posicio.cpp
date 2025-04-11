@@ -7,7 +7,7 @@ bool Posicio::operator==(const Posicio& posicio) const
 	return m_fila == posicio.m_fila && m_columna == posicio.m_columna;
 }
 
-string Posicio::operator+()
+string Posicio::operator+() const
 {
 	return m_columna + m_fila;
 }

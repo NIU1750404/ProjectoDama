@@ -7,8 +7,7 @@
 
 using namespace std;
 
-static const int N_FILES = 8;
-static const int N_COLUMNES = 8;
+
 
 class Tauler
 {
